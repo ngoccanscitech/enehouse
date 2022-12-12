@@ -65,7 +65,16 @@ body {
 /* Banner */
 
 .banner {
-    background: url('../img/banner-background.svg') top center / cover no-repeat;
+    background: url(../img/banner.jpg) top center / cover no-repeat;
+    clip-path: polygon(41% 8%, 59% 8%, 100% 0, 100% 100%, 0 100%, 0 0);
+    position: absolute;
+    z-index: 2;
+    margin-top: -66px;
+}
+
+.banner__content {
+    padding-top: 200px!important;
+    padding-bottom: 173px!important;
 }
 
 .banner__content-head {
@@ -117,6 +126,47 @@ body {
     min-height: 100%;
 }
 
+.banner-bottom {
+    background-color: #D5EEF9;
+    height: 486px;
+    margin-top: 519px;
+}
+
+.banner-bottom .img-chervon{
+    top: -5%;
+    z-index: 3;
+}
+
+.banner-cards {
+    z-index: 4;
+    top: 40%;
+}
+
+@media (max-width: 768px) {
+    .banner {
+        margin-top: 0;
+        clip-path: initial;
+    }
+    .banner-bottom .img-chervon {
+        top: 36%;
+    }
+    .banner-cards {
+        top: 62%;
+    }
+}
+
+@media (max-width: 576px) {
+    .banner-bottom .img-chervon {
+        top: 14%;
+    }
+    .banner-cards {
+        top: 18%;
+    }
+    .banner__content {
+        padding-top: 40px!important;
+    }
+}
+
 /* Vision */
 #vision .card, #vision .card-img-top{
     border-radius: initial;
@@ -166,12 +216,13 @@ body {
 
 #vision .nav-item {
     font-weight: 700;
-    font-size: 24px;
+    font-size: 21px;
     line-height: 28px;
 }
 
 #vision .nav-item .nav-link {
-    padding: 18px 18px;
+    padding: 18px 17px;
+    font-weight: 700;
 }
 
 .p-42 {
@@ -179,7 +230,7 @@ body {
 }
 
 .tab-content--border {
-   border: 1px solid red;
+   border: 1px solid #E1ECF6;
    border-top: none;
    box-shadow: 5px 5px#93D3EE;
 
